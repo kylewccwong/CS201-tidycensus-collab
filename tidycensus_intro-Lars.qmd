@@ -1,6 +1,6 @@
 ---
 title: "tidycensus Intro & GitHub Collab"
-author: "Lars Richel" 
+author: "Lars Richel " 
 date: "`r Sys.Date()`"
 format: html
 editor: visual
