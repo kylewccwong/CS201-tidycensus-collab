@@ -30,11 +30,11 @@ You can always visit the [Census website](https://data.census.gov) and grab data
 
 API stands for Application Programming Interface. Here is the idea:
 
--   You [request a unique API key](https://api.census.gov/data/key_signup.html) from the Bureau (or any other org that offers this)
+- You [request a unique API key](https://api.census.gov/data/key_signup.html) from the Bureau (or any other org that offers this)
 
--   Place your unique API key in the code below
+- Place your unique API key in the code below
 
--   Import all the census data you want, as long as you follow [User Guide](https://www.census.gov/data/developers/guidance/api-user-guide.Help_&_Contact_Us.html)
+- Import all the census data you want, as long as you follow [User Guide](https://www.census.gov/data/developers/guidance/api-user-guide.Help_&_Contact_Us.html)
 
 ## Define API
 
@@ -232,7 +232,7 @@ Directions:
 
 2.  Take turns! Who will do what? Be careful not to overwrite one another.
 
-    -   I will be looking for at least 4 exchanges
+    - I will be looking for at least 4 exchanges
 
 3.  Paste your challenge answers below
 
@@ -243,6 +243,15 @@ REMEMBER! [Pull]{.underline} before working in the `-collab.qmd` file. [Save, Co
 Investigating (insert variable here) on Oahu at the census tract level.
 
 ```{r, message=FALSE, warning=FALSE, results='hide'}
+median_income <- get_acs(
+  geography = "tract",
+  variables = c(med_income = "DP03_0086"),
+  state = "HI",
+  county = "Honolulu",
+  geometry = TRUE,
+  output = "wide",
+  year = 2024) %>% 
+  dplyr::filter(GEOID != "15003981200" & GEOID !="15003981900")
 
 
 ```
