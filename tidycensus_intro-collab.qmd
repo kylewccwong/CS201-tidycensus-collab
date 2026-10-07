@@ -253,7 +253,7 @@ median_income <- get_acs(
   geometry = TRUE,
   output = "wide",
   year = 2024) %>% 
-  dplyr::filter(GEOID != "15003981200" & GEOID !="15003981900")
+  dplyr::filter(GEOID != "15003981200" & GEOID !="15003981900") 
 
 
 ```
