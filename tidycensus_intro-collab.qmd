@@ -32,18 +32,18 @@ You can always visit the [Census website](https://data.census.gov) and grab data
 
 API stands for Application Programming Interface. Here is the idea:
 
-- You [request a unique API key](https://api.census.gov/data/key_signup.html) from the Bureau (or any other org that offers this)
+-   You [request a unique API key](https://api.census.gov/data/key_signup.html) from the Bureau (or any other org that offers this)
 
-- Place your unique API key in the code below
+-   Place your unique API key in the code below
 
-- Import all the census data you want, as long as you follow [User Guide](https://www.census.gov/data/developers/guidance/api-user-guide.Help_&_Contact_Us.html)
+-   Import all the census data you want, as long as you follow [User Guide](https://www.census.gov/data/developers/guidance/api-user-guide.Help_&_Contact_Us.html)
 
 ## Define API
 
 [Request your own](https://api.census.gov/data/key_signup.html) or use Amber's (below).
 
 ```{r Define API Key, message=FALSE}
-census_api_key("")
+census_api_key("1ac759ea17827990b6b83d2ea74559a25f20a38f")
 ```
 
 ## Import Variables
@@ -234,7 +234,7 @@ Directions:
 
 2.  Take turns! Who will do what? Be careful not to overwrite one another.
 
-    - I will be looking for at least 4 exchanges
+    -   I will be looking for at least 4 exchanges
 
 3.  Paste your challenge answers below
 
@@ -262,7 +262,7 @@ median_income <- get_acs(
 
 ```{r, message=FALSE, warning=FALSE, results='hide'}
 
-
+kyle
 ```
 
 ### Time Series
@@ -278,7 +278,7 @@ Exploring the relationship between (insert variable here) and (insert variable h
 
 ```{r, message=FALSE, warning=FALSE, results='hide'}
 
-
+kyle
 ```
 
 ### Describe what you found
