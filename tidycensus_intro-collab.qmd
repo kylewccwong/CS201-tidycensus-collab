@@ -43,7 +43,7 @@ API stands for Application Programming Interface. Here is the idea:
 [Request your own](https://api.census.gov/data/key_signup.html) or use Amber's (below).
 
 ```{r Define API Key, message=FALSE}
-census_api_key("1ac759ea17827990b6b83d2ea74559a25f20a38f")
+#census_api_key("")
 ```
 
 ## Import Variables
@@ -110,9 +110,10 @@ Now let's look at family poverty in Honolulu County over time
 
 ```{r}
 # get the data (looking at ____)
-NAME <- get_acs(
+# get the data (looking at unemployment)
+oahu_unemployment <- get_acs(
   geography = "tract",
-  variables = c(NAME = "DP02_0158"),
+  variables = c(percent_unemployment = "DP03_0009P"),
   state = "HI",
   county = "Honolulu",
   geometry = TRUE,
@@ -121,7 +122,7 @@ NAME <- get_acs(
   dplyr::filter(GEOID != "15003981200" & GEOID !="15003981900")
 
 # map it
-oahu_unemployment_map <- ggplot(NAME) +
+oahu_unemployment_map <- ggplot(oahu_unemployment) +
   geom_sf_interactive(
     aes(
       fill = percent_unemploymentE,
@@ -131,7 +132,6 @@ oahu_unemployment_map <- ggplot(NAME) +
   theme_void() 
 
 girafe(ggobj = oahu_unemployment_map, width = 700, height = 400)
-
 ```
 
 ## Back to Exploring Poverty...
@@ -262,7 +262,7 @@ median_income <- get_acs(
 
 ```{r, message=FALSE, warning=FALSE, results='hide'}
 
-kyle
+
 ```
 
 ### Time Series
@@ -278,7 +278,7 @@ Exploring the relationship between (insert variable here) and (insert variable h
 
 ```{r, message=FALSE, warning=FALSE, results='hide'}
 
-kyle
+
 ```
 
 ### Describe what you found
