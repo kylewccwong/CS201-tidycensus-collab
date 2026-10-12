@@ -32,11 +32,11 @@ You can always visit the [Census website](https://data.census.gov) and grab data
 
 API stands for Application Programming Interface. Here is the idea:
 
-- You [request a unique API key](https://api.census.gov/data/key_signup.html) from the Bureau (or any other org that offers this)
+-   You [request a unique API key](https://api.census.gov/data/key_signup.html) from the Bureau (or any other org that offers this)
 
-- Place your unique API key in the code below
+-   Place your unique API key in the code below
 
-- Import all the census data you want, as long as you follow [User Guide](https://www.census.gov/data/developers/guidance/api-user-guide.Help_&_Contact_Us.html)
+-   Import all the census data you want, as long as you follow [User Guide](https://www.census.gov/data/developers/guidance/api-user-guide.Help_&_Contact_Us.html)
 
 ## Define API
 
@@ -234,7 +234,7 @@ Directions:
 
 2.  Take turns! Who will do what? Be careful not to overwrite one another.
 
-    - I will be looking for at least 4 exchanges
+    -   I will be looking for at least 4 exchanges
 
 3.  Paste your challenge answers below
 
@@ -293,7 +293,7 @@ ggplot(median_income_2014_2024, aes(x = year, y = estimate, group = 1)) +
   geom_line() + 
   geom_point() +
   labs(title = "Honolulu County Median Household Income (ACS Rolling 5-year estimates)",
-       x = "ACS Release Year (5-year window)",
+       x = "ACS Release Year (10-year window)",
        y = "Income in Dollars")
 
 ```
@@ -328,3 +328,9 @@ ggplot(median_income_males_divorced, aes(x = percent_male_divorceE,y = med_incom
 ```
 
 ### Describe what you found
+
+Our mapping looks like what you'd predict. Median household income looks fairly accurate compared to initial expectations.
+
+Our time graph shows a 10 year window of median household income growth. From this graph, we can see a substantial increase in median household income at nearly a 50% increase. Paired with more stats/visualizations, this would be a great option to show how much inflation has affected our economy.
+
+Our final graph showed the correlation between the number of divorced males from 2020-2024 and median household income. We can see from our graph that there is not a very strong correlation between the 2 variables. Before creating the graph, one may think there could be a correlation between the 2 variables because it would lead to less dual-household incomes. After viewing our graph, one reason we can assume there was not much of a correlation is because of the minimal amount of divorced males. This could just be considered noise.
